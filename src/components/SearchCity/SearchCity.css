@@ -1,0 +1,21 @@
+#city-search {
+    text-align: center;
+}
+
+#text-search {
+    color: #fff;
+    margin: 1rem 0 .4rem 0;
+    letter-spacing: .50px;
+}
+
+#input-search {
+    padding: .3rem;
+    margin: 0rem .5rem 1.5rem .5rem;
+    border-radius: 1rem;
+    width: 20rem;
+    border: transparent;
+}
+
+svg {
+    color: rgba(255, 255, 255, 0.788);
+}

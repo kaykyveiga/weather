@@ -1,0 +1,19 @@
+#day {
+    font-size: .9rem;
+    color: #CDE0F2;
+}
+
+#city{
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+    #day, #city{
+        margin: 0 1rem;
+    }
+    #city{
+        margin-bottom: 1.5rem;
+    }
+}
