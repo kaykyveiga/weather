@@ -3,3 +3,9 @@
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+body, html {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to bottom, #1B497E, #6DAABA, #99C3CB, #EDE9E8) no-repeat;
+}

@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react";
+
 import fetchWeatherData from "../../API/WeatherApi";
+
+import { RiWaterFlashFill } from 'react-icons/ri';
+import { BiWind } from 'react-icons/bi';
+import { WiThermometer } from 'react-icons/wi';
+
+import "./Weather.css"
 
 function Weather() {
   const [weatherData, setWeatherData] = useState(null);
@@ -24,20 +31,33 @@ function Weather() {
     return <div>Loading...</div>;
   }
   return (
-    <div id="weather">
+    <div id="container-weather">
       <div id="forecast">
-        <p>Weather</p>
-        <p>{hours}:{minutes}</p>
-        <h2>25°</h2>
-        <p>Nublado <span>Status nuvem</span></p>
+        <p id="cloud-status">Status da nuvem</p>
+        <p className="forecast-paragraph">Weather</p>
+        <p className="forecast-paragraph">{hours}:{minutes}</p>
+        <h2 id="temperature">25°</h2>
+        <p id="weather-condition">Condição meteorológica: Nublado</p>
       </div>
       <div id="more-details">
-        <span>Umidade</span>
-        <p>90%</p>
-        <span>Vento</span>
-        <p>15km</p>
-        <span>Temperatura</span>
-        <p>25°C</p>
+      <p className="weather-paragraph">
+          <span>
+            <RiWaterFlashFill />
+          </span>
+          90%
+        </p>
+        <p className="weather-paragraph">
+          <span>
+            <BiWind />
+          </span>
+          15km
+        </p>
+        <p className="weather-paragraph">
+          <span>
+            <WiThermometer />
+          </span>
+          25°C
+        </p>
       </div>
     </div>
   )

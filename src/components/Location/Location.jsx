@@ -1,3 +1,5 @@
+import "./Location.css"
+
 function Location() {
     const currentDate = new Date()
     const monthNumber = currentDate.getMonth()
@@ -23,8 +25,8 @@ function Location() {
 
     return (
         <div>
-            <p>Hoje, {day} {monthName}</p>
-            <h3>Rio de janeiro</h3>
+            <p id="day">Hoje, {day} {monthName}</p>
+            <h3 id="city">Rio de janeiro</h3>
         </div>
     )
 }
