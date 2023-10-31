@@ -1,7 +1,4 @@
-
-
-
-
+import { MdLocationOn, MdEvent } from 'react-icons/md';
 import { RiWaterFlashFill } from 'react-icons/ri';
 import { BiWind } from 'react-icons/bi';
 import { WiThermometer } from 'react-icons/wi';
@@ -30,7 +27,6 @@ function Weather({ weatherData }) {
     default: monthName = "Mês inválido"; break;
   }
 
-
   const meteorologicalLocation = weatherData.name;
   const temperature = Math.round(weatherData.main.temp);
   const meteorologicalCondition = weatherData.weather[0].description;
@@ -38,15 +34,18 @@ function Weather({ weatherData }) {
   const humidity = weatherData.main.humidity;
   const cloudStatus = ` https://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`
 
-
-
-
   return (
     <div id="container-weather">
       <div id="forecast">
         <p id="cloud-status"><img src={cloudStatus} alt="" /></p>
-        <p className="forecast-paragraph">{meteorologicalLocation}</p>
-        <p className='forecast-paragraph'>Hoje, {day} {monthName}</p>
+        <p className="forecast-paragraph">
+          <MdLocationOn className='location'/>
+          {meteorologicalLocation}
+          </p>
+        <p className='forecast-paragraph'>
+          <MdEvent className='currentDate'/>
+          Hoje, {day} {monthName}
+          </p>
         <h2 id="temperature">{temperature}°</h2>
         <p id="weather-condition">Condição meteorológica: {meteorologicalCondition}</p>
       </div>
@@ -73,7 +72,5 @@ function Weather({ weatherData }) {
     </div>
   )
 }
-
-
 
 export default Weather

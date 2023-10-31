@@ -21,9 +21,13 @@
 #temperature {
     grid-column: 2/2;
 }
+.currentDate, .location {
+    margin-right: .5rem;
+}
 
 #temperature{
     font-size: 5rem;
+    margin: .5rem 0;
 }
 
 #more-details {
