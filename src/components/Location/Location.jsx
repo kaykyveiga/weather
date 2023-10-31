@@ -26,7 +26,6 @@ function Location() {
     return (
         <div>
             <p id="day">Hoje, {day} {monthName}</p>
-            <h3 id="city">Rio de janeiro</h3>
         </div>
     )
 }
