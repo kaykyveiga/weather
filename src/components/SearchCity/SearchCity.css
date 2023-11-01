@@ -14,5 +14,9 @@
     border-radius: 1rem;
     width: 20rem;
     border: transparent;
+    text-align: center;
 }
 
+#input-search::selection{
+    border: transparent;
+} 

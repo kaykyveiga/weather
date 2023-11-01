@@ -1,12 +1,16 @@
-#day {
+.location-paragraph {
     color: #ffffff;
     font-size: 1.1rem;
     margin-bottom: 1rem;
 }
 
+.location-svg{
+    margin-right: .4rem;
+}
+
 
 @media screen and (max-width: 500px) {
-    #day{
-        margin-bottom: 0 0 1.5rem 1rem;
+    .location-paragraph{
+        margin-left: 1rem;
     }
 }

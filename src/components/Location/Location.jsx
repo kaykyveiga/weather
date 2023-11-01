@@ -1,9 +1,11 @@
+import { MdLocationOn, MdEvent } from 'react-icons/md';
 import "./Location.css"
 
-function Location() {
+function Location({ weatherData }) {
     const currentDate = new Date()
     const monthNumber = currentDate.getMonth()
     let monthName;
+    const meteorologicalLocation = weatherData.name;
 
     switch (monthNumber) {
         case 0: monthName = "Janeiro"; break;
@@ -25,7 +27,14 @@ function Location() {
 
     return (
         <div>
-            <p id="day">Hoje, {day} {monthName}</p>
+            <p className='location-paragraph'>
+                <MdLocationOn className='location-svg' />
+                {meteorologicalLocation}
+            </p>
+            <p className='location-paragraph'>
+                <MdEvent className='location-svg'/>
+                Hoje, {day} {monthName}
+            </p>
         </div>
     )
 }

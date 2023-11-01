@@ -1,10 +1,11 @@
 import "./SearchCity.css"
 import { useState } from 'react';
 import Weather from '../Weather/Weather';
+import Location from "../Location/Location";
 
 const SearchCity = () => {
   const [city, setCity] = useState("");
-  const [weatherData, setWeatherData] = useState(null); 
+  const [weatherData, setWeatherData] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,7 +15,6 @@ const SearchCity = () => {
         .then(response => response.json())
         .then((data) => {
           setWeatherData(data);
-          console.log(data)
         });
     }
   }
@@ -27,9 +27,10 @@ const SearchCity = () => {
             <p id='text-search'>Busque por sua cidade:</p>
             <input type="text" name="city" id="input-search" value={city} onChange={(e) => setCity(e.target.value)} />
           </label>
-        
+
         </form>
       </div>
+      {weatherData && <Location weatherData={weatherData} />}
       {weatherData && <Weather weatherData={weatherData} />}
     </div>
   );

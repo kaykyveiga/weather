@@ -1,37 +1,36 @@
 #container-weather {
-    background: linear-gradient(to bottom, #80B0BD, #5688A7);
+    background: linear-gradient(to bottom, #7D0CF8, #0B4FD9) no-repeat fixed;
     border-radius: 2rem;
     color: #fff;
     padding: 1rem;
-    max-width: 500px;
+    max-width: 30rem;
 }
 
 #forecast {
     display: grid;
-    grid-template-columns: 30% 1fr;
+    grid-template-columns: 25% 1fr;
     align-items: center;
 }
 
 #cloud-status {
     grid-column: 1 / 2;
+    width: 5em;
 }
 
-.forecast-paragraph,
 #weather-condition,
 #temperature {
-    grid-column: 2/2;
-}
-.currentDate, .location {
-    margin-right: .5rem;
+    grid-column: 2/3;
 }
 
-#temperature{
+#temperature {
     font-size: 5rem;
     margin: .5rem 0;
 }
 
 #more-details {
     margin-top: 1rem;
+
+    text-align: center;
 }
 
 .weather-paragraph {
@@ -63,21 +62,14 @@
     }
 }
 
-
-@media screen and (max-width: 460px) {
-    .weather-paragraph {
-        padding: .2rem 2.75rem;
-    }
-}
-
-@media screen and (max-width: 436px) {
+@media screen and (max-width: 445px) {
     .weather-paragraph {
         padding: .2rem 2.45rem;
     }
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 390px) {
     .weather-paragraph {
-        padding: .2rem 2.2rem;
+        padding: .2rem 1.5rem;
     }
 }
