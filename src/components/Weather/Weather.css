@@ -25,6 +25,7 @@
 #temperature {
     font-size: 5rem;
     margin: .5rem 0;
+    font-weight: 500;
 }
 
 #more-details {
@@ -35,9 +36,8 @@
 
 .weather-paragraph {
     display: inline-block;
-    border-top: 1px solid #ffffff;
+    border-top: 1px solid #ffffff67;
     padding: .3rem 3.5rem;
-
     text-align: center;
 }
 
@@ -48,7 +48,7 @@
 
 .weather-paragraph:nth-child(1),
 .weather-paragraph:nth-child(2) {
-    border-right: 1px solid #ffffff;
+    border-right: 1px solid #ffffff67;
 }
 
 

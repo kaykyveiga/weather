@@ -17,6 +17,6 @@
     text-align: center;
 }
 
-#input-search::selection{
-    border: transparent;
-} 
+input:focus {
+    outline: none;
+}

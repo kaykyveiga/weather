@@ -1,4 +1,3 @@
-import { MdLocationOn, MdEvent } from 'react-icons/md';
 import { RiWaterFlashFill } from 'react-icons/ri';
 import { BiWind } from 'react-icons/bi';
 import { WiThermometer } from 'react-icons/wi';
@@ -6,7 +5,7 @@ import { WiThermometer } from 'react-icons/wi';
 import "./Weather.css"
 
 function Weather({ weatherData }) {
-  
+
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
@@ -20,7 +19,7 @@ function Weather({ weatherData }) {
   return (
     <div id="container-weather">
       <div id="forecast">
-        <p><img id="cloud-status" src={cloudStatus} alt="" /></p>
+        <p><img id="cloud-status" src={cloudStatus} alt="Status da nuvem" /></p>
         <h2 id="temperature">{temperature}°</h2>
         <p id="weather-condition">Condição meteorológica: {meteorologicalCondition}</p>
       </div>
