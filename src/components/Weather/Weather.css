@@ -68,8 +68,13 @@
     }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 400px) {
     .weather-paragraph {
-        padding: .2rem 1.5rem;
+        padding: .2rem 1.9rem;
+    }
+
+    #weather-condition,
+    #temperature {
+        margin-left: 1rem;
     }
 }
