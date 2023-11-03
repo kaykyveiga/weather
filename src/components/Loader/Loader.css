@@ -1,0 +1,44 @@
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: loading 1.8s linear infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+        box-shadow: 1px 5px 1px #e65c00;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        box-shadow: 1px 5px 1px #18b201;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        box-shadow: 1px 5px 1px #0456c8;
+    }
+}
+
+.loading::before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.082);
+}

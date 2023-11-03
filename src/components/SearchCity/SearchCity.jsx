@@ -1,11 +1,14 @@
 import { useState } from 'react';
+import { FaSearch } from 'react-icons/fa';
 
-import Weather from '../Weather/Weather';
+import Loader from '../Loader/Loader';
 import Location from "../Location/Location";
+import Weather from '../Weather/Weather';
 
 import "./SearchCity.css"
 
 const SearchCity = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState(null);
 
@@ -20,6 +23,7 @@ const SearchCity = () => {
           } else {
             setWeatherData(data);
           }
+          setIsLoading(false)
         });
     }
   }
@@ -32,7 +36,9 @@ const SearchCity = () => {
             <p id='text-search'>Busque por sua cidade:</p>
             <input type="text" name="city" id="input-search" value={city} onChange={(e) => setCity(e.target.value)} />
           </label>
+            <button type='submit' id='submit-btn'><FaSearch /></button>
         </form>
+        {!weatherData && <Loader/>}
       </div>
       {weatherData && <Location weatherData={weatherData} />}
       {weatherData && <Weather weatherData={weatherData} />}
